@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pavitra Kadia | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary:#0f172a;
+      --accent:#6366f1;
+      --pink:#ec4899;
+      --cyan:#22d3ee;
+      --yellow:#facc15;
+      --bg:linear-gradient(135deg,#eef2ff,#ecfeff,#fff7ed);
+      --card:#ffffff;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family:'Poppins',sans-serif;
+      background:var(--bg);
+      color:#111827;
+      line-height:1.6;
+    }
+    header {
+      background:linear-gradient(135deg, #6366f1, #22d3ee, #ec4899, #facc15);
+      background-size:300% 300%;
+      animation:gradientMove 10s ease infinite;
+      color:white;
+      padding:120px 20px;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    @keyframes gradientMove{
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
+    }
+    header::after{
+      content:"";
+      position:absolute;
+      bottom:-90px;
+      left:0;
+      width:100%;
+      height:180px;
+      background:white;
+      transform:skewY(-4deg);
+    }
+    header::after{
+      content:"";
+      position:absolute;
+      bottom:-80px;
+      left:0;
+      width:100%;
+      height:160px;
+      background:white;
+      transform:skewY(-4deg);
+    }
+    header h1 { font-size:3rem; }
+    header p { margin-top:10px; font-size:1.2rem; opacity:0.9; }
+    nav {
+      display:flex;
+      justify-content:center;
+      gap:34px;
+      padding:18px;
+      background:rgba(255,255,255,0.75);
+      backdrop-filter:blur(14px);
+      box-shadow:0 6px 30px rgba(0,0,0,0.12);
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    nav a{
+      text-decoration:none;
+      font-weight:600;
+      background:linear-gradient(135deg,#6366f1,#ec4899,#22d3ee);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    nav a {
+      text-decoration:none;
+      color:var(--primary);
+      font-weight:500;
+    }
+    nav a:hover { color:var(--accent); }
+    section {
+      padding:80px 20px;
+      max-width:1100px;
+      margin:auto;
+    }
+    h2 {
+      font-size:2.2rem;
+      margin-bottom:30px;
+      text-align:center;
+    }
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+    .card {
+      background:var(--card);
+      padding:36px;
+      border-radius:24px;
+      box-shadow:0 20px 50px rgba(0,0,0,0.12);
+      transition:transform 0.4s, box-shadow 0.4s;
+      position:relative;
+    }
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius:24px;
+      padding:3px;
+      background:linear-gradient(135deg,#6366f1,#22d3ee,#ec4899,#facc15);
+      -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+      -webkit-mask-composite:xor;
+      mask-composite:exclude;
+    }
+    .card:hover{
+      transform:translateY(-12px) scale(1.03);
+      box-shadow:0 30px 70px rgba(0,0,0,0.18);
+    }
+    .card:hover {
+      transform:translateY(-10px) scale(1.02);
+      box-shadow:0 25px 60px rgba(37,99,235,0.25);
+    }
+    .card:hover { transform:translateY(-6px); }
+    footer {
+      background:linear-gradient(135deg,#0f172a,#1e293b,#312e81);
+      color:white;
+      text-align:center;
+      padding:60px 20px;
+    }
+    .btn {
+      display:inline-block;
+      margin-top:26px;
+      padding:16px 40px;
+      background:linear-gradient(135deg,#6366f1,#22d3ee,#ec4899);
+      background-size:200% 200%;
+      animation:gradientMove 6s ease infinite;
+      color:white;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:700;
+      letter-spacing:0.6px;
+      box-shadow:0 14px 35px rgba(0,0,0,0.25);
+    }
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Pavitra</h1>
+  <p style="margin-top:6px; font-size:1rem; opacity:0.85;">(Full Name: Pavitra)</p>
+  <p>Student | Badminton Player | Academic Achiever</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I am <strong>Pavitra</strong>, a 14-year-old student with a strong passion for learning, sports, and personal growth.
+      I consistently perform as a class topper and actively participate in academic olympiads and competitive examinations.
+      Alongside academics, I am a dedicated badminton player, learning discipline, focus, and teamwork through sports.
+    </p>
+  </div>
+</section>
+
+<section id="achievements">
+  <h2>Achievements</h2>
+  <div class="grid">
+    <div class="card">🏆 Class Topper in multiple academic years</div>
+    <div class="card">🥇 Achieved top positions in Academic Olympiads</div>
+    <div class="card">🏸 Active Competitive Badminton Player</div>
+    <div class="card">📚 Recognized for academic excellence and consistency</div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills & Strengths</h2>
+  <div class="grid">
+    <div class="card">Strong Academic Foundation</div>
+    <div class="card">Time Management & Discipline</div>
+    <div class="card">Strategic Thinking</div>
+    <div class="card">Leadership & Teamwork</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="card" style="text-align:center;">
+    <p>Interested in connecting or collaborating?</p>
+    <p><strong>Email:</strong> pavitrakadia@gmail.com</p>
+    <a class="btn" href="mailto:pavitrakadia@gmail.com">Send Email</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Pavitra Kadia • Designed with creativity & passion</p>
+</footer>
+
+</body>
+</html>
