@@ -1,0 +1,71 @@
+/* =============================
+   Pavitra Portfolio – Vibrant Multicolour Theme
+   ============================= */
+
+:root {
+  --primary:#0f172a;
+  --accent:#6366f1;
+  --pink:#ec4899;
+  --cyan:#22d3ee;
+  --yellow:#facc15;
+  --bg:linear-gradient(135deg,#eef2ff,#ecfeff,#fff7ed);
+  --card:#ffffff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--bg);
+  color:#111827;
+  line-height:1.6;
+}
+
+/* ===== HEADER ===== */
+header{
+  background:linear-gradient(135deg,#6366f1,#22d3ee,#ec4899,#facc15);
+  background-size:300% 300%;
+  animation:gradientMove 10s ease infinite;
+  color:white;
+  padding:120px 20px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+header::after{
+  content:"";
+  position:absolute;
+  bottom:-90px;
+  left:0;
+  width:100%;
+  height:180px;
+  background:white;
+  transform:skewY(-4deg);
+}
+
+header h1{
+  font-size:3.2rem;
+}
+
+header p{
+  margin-top:12px;
+  font-size:1.2rem;
+  opacity:0.95;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+  display:flex;
+  justify-content:center;
+  gap:
